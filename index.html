@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="./index.html" id="logo">Photon</a
+        ><input type="checkbox" id="mode" />
+      </h1>
+      <p>A beautiful way to find free Pictures from Pexels</p>
+      <form class="search-form">
+        <input
+          type="text"
+          name="search"
+          class="search-input"
+          placeholder="Search Pictures ..."
+        />
+        <button type="submit" class="submit-btn">Search</button>
+      </form>
+    </header>
+    <main>
+      <div class="gallery"></div>
+    </main>
+    <div class="nav-button">
+      <button class="more">More</button>
+    </div>
+    <div class="modal-container">
+      <div class="modal">
+        <a href="https://www.pexels.com" id="pexel">
+          <img src="https://images.pexels.com/lib/api/pexels-white.png" />
+        </a>
+        <img
+          src="https://images.pexels.com/photos/4654356/pexels-photo-4654356.jpeg"
+          alt="preview"
+          class="preview"
+        />
+        <h2>Image Size</h2>
+        <ul>
+          <li>
+            <a href="" id="landscape"
+              >Landscape <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+          <li>
+            <a href="" id="large"
+              >Large <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+          <li>
+            <a href="" id="medium"
+              >Medium <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+          <li>
+            <a href="" id="original"
+              >Original <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+          <li>
+            <a href="" id="portrait"
+              >Portrait <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+          <li>
+            <a href="" id="small"
+              >Small <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+          <li>
+            <a href="" id="tiny"
+              >Tiny <img src="./img/download-solid.svg" alt="download"
+            /></a>
+          </li>
+        </ul>
+        <img src="./img/window-close.svg" alt="closeBtn" class="closeBtn" />
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
