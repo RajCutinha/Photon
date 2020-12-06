@@ -138,6 +138,9 @@ function App() {
 								<img src={downloadMode.imgData.src.portrait} alt="" />
 							</div>
 							<div className="download-links">
+								<a href="https://www.pexels.com" target="_blank">
+									<img src="https://images.pexels.com/lib/api/pexels.png" />
+								</a>
 								<h5>Download Links</h5>
 								<ul>
 									{downloadLinks.map((link, index) => {
