@@ -1,10 +1,10 @@
 import "./Piccard.css";
 import downloadIcon from "./download-solid.svg";
 
-const Piccard = ({ galleryImg }) => {
+const Piccard = ({ galleryImg, downloadImg }) => {
 	return (
 		<div className="gallery-img">
-			<img src={galleryImg.src.original} alt="" />
+			<img src={galleryImg.src.portrait} alt="" />
 			<div className="gallery-info">
 				<p>
 					<a
@@ -15,7 +15,7 @@ const Piccard = ({ galleryImg }) => {
 						By {galleryImg.photographer}
 					</a>
 				</p>
-				<button className="download">
+				<button className="download" onClick={(e) => downloadImg(e)}>
 					Download
 					<img src={downloadIcon} alt="Download" />
 				</button>

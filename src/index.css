@@ -29,6 +29,10 @@ body {
 	background-color: var(--body-color);
 }
 
+img {
+	max-width: 100%;
+}
+
 .container {
 	max-width: 1440px;
 	width: 90%;
