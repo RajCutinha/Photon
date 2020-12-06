@@ -4,7 +4,8 @@ import arrowLeft from "./arrow-left.svg";
 import "./App.css";
 
 function App() {
-	const key = process.env.key;
+	const key = "563492ad6f91700001000001c5d35c820b5e4b4995d88a1b7d978d9b";
+
 	const [galleryImgs, setGalleryImgs] = React.useState([]);
 	const [searchValue, setSearchValue] = React.useState("");
 	const [page, setPage] = React.useState(1);
@@ -70,7 +71,6 @@ function App() {
 
 	function downloadImg(e) {
 		if (downloadMode.active === false) {
-			const data = [];
 			const src = e.target.parentElement.parentElement.querySelector("img")
 				.src;
 			const item = galleryImgs.photos.find(
@@ -81,19 +81,10 @@ function App() {
 				active: true,
 				imgData: { ...item },
 			});
-			for (const keyName in downloadMode.imgData.src) {
-				data.push({
-					name: keyName,
-					src: downloadMode.imgData.src[keyName],
-				});
-				setDownloadLinks(data);
-			}
 		} else {
 			setDownloadMode({ ...downloadMode, active: false });
 		}
 	}
-
-	console.log(downloadLinks);
 
 	React.useEffect(() => {
 		let initalLoad = true;
@@ -110,6 +101,17 @@ function App() {
 			document.documentElement.setAttribute("data-theme", "dark");
 		}
 	}, []);
+
+	React.useEffect(() => {
+		const data = [];
+		for (const keyName in downloadMode.imgData.src) {
+			data.push({
+				name: keyName,
+				src: downloadMode.imgData.src[keyName],
+			});
+			setDownloadLinks(data);
+		}
+	}, [downloadMode]);
 
 	return (
 		<div className="App">
